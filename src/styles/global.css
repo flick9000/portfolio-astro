@@ -58,6 +58,7 @@ h1 {
 
 strong {
   color: var(--color-heading);
+  font-weight: 500;
 }
 
 h2,
@@ -111,7 +112,7 @@ main {
 }
 
 main a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-underline-offset: 0.25rem;
 }
 

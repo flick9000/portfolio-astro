@@ -1,0 +1,55 @@
+---
+---
+
+    <footer>
+      <div>
+        <ul>
+          <li><a href="/overview/">Overview</a></li>
+          <li><a href="/music/">Music</a></li>
+          <li><a href="/stuff/">Stuff</a></li>
+        </ul>
+        <div class="github">
+          <iconify-icon icon="mdi:github"></iconify-icon>
+          <a href="https://github.com/flick9000/portfolio"
+            >flick9000/portfolio</a
+          >
+        </div>
+      </div>
+    </footer>
+<style>
+footer {
+  display: flex;
+  border-top: 1px solid var(--color-background-elevated);
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+footer > div > ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer > div > p {
+  color: var(--color-subheading);
+}
+
+footer .github {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+@media (max-width: 600px) {
+  footer > div {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+</style>

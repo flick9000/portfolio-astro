@@ -1,0 +1,85 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+const { navLinkHref } = Astro.props;
+const { navLinkTitle} = Astro.props;
+---
+
+<script>
+const navIcon = document.getElementById("nav-icon");
+navIcon?.addEventListener("click", () => {
+	const navbar = document.getElementById("navbar");
+	if (!navbar.classList.contains("responsive")) {
+    navbar.classList.add("responsive");
+    document.body.style.overflow = "hidden"; // Or whatever fallback you need
+  } else {
+    navbar.classList.remove("responsive");
+    document.body.style.overflow = "visible";
+  }
+})
+</script>
+
+    <nav class="navbar" id="navbar">
+      <h1>Francesco</h1>
+      <ul role="list">
+		<slot />
+		<HeaderLink href="https://github.com/flick9000" text="GitHub" />
+      </ul>
+      <iconify-icon
+        id="nav-icon"
+        icon="gravity-ui:bars-unaligned"
+      ></iconify-icon>
+    </nav>
+	
+<style>
+	nav {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  height: 120px;
+	}
+
+	nav > h1 {
+	  font-size: 1.5rem;
+	  z-index: 1;
+	}
+
+	nav > ul {
+	  display: flex;
+	  gap: clamp(1.5rem, 3vw, 3rem);
+	  font-size: 1rem;
+	}
+
+	nav > iconify-icon {
+	  display: none;
+	  cursor: pointer;
+	  font-size: 1.5rem;
+	  z-index: 1;
+	}
+	@media (max-width: 600px) {
+	  nav > ul {
+	    display: none;
+	  }  
+	  nav > iconify-icon {
+	    display: block;
+	  }  
+	  .navbar.responsive {
+	    position: relative;
+	  }  
+	  .navbar.responsive > ul {
+	    position: fixed;
+	    display: flex;
+	    flex-direction: column;
+	    padding: 0 15%;
+	    font-size: 3rem;
+	    gap: 1rem;
+	    justify-content: center;
+	    background: var(--color-background-base);  
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    z-index: 0;
+	    left: 0;
+	  }
+	}
+</style>

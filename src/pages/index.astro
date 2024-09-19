@@ -1,0 +1,86 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeaderLink from '../components/HeaderLink.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={"Francesco Gerardi"} description={"SITE_DESCRIPTION"} />
+	</head>
+	<body>
+		<Header> 
+			<HeaderLink href="#about" text="About" />
+			<HeaderLink href="/blog/" text="Blog" />
+		</Header>
+    <section id="hero">
+      <h1 class="hero">
+        I'm Francesco — a web dev & designer from Italy
+        <span> creating modern and user-friendly websites. </span>
+      </h1>
+    </section>
+    <main>
+      <article>
+        <div class="even-columns" id="about">
+          <div style="border: none">
+            <h1>F. Gerardi</h1>
+            <h2>Web Dev & IT Guy</h2>
+          </div>
+          <p style="border: none">
+            Hi, I'm Francesco Gerardi, Web Developer & Designer from Italy.
+            <br />
+            <br />I'm committed to creating modern and user-friendly websites,
+            i'm always looking for new challenges and opportunities. I like to
+            keep my projects framework-agnostic, vanilla JavaScript is good
+            enough for me.
+            <br />
+            <br />
+            I'm also very passionate about debloating and tweaking Windows to
+            make it respect your privacy & more performant. <br />
+            You can read more in my blog, where i post my thoughts, tweaks and
+            fixes to improve Windows performance & privacy. <br />
+            <br />I'm currently working on a personal open-source project called
+            <a target="_blank" href="https://winscript.pages.dev">WinScript</a>,
+            more details below and on my
+            <a target="_blank" href="https://github.com/flick9000">GitHub</a>.
+          </p>
+        </div>
+      </article>
+      <article>
+        <div class="even-columns" id="projects">
+          <div>
+            <h1>WinScript</h1>
+            <h2>Open-Source</h2>
+          </div>
+          <p>
+            WinScript is a powerful, open-source tool designed to help you build
+            custom scripts for optimizing Windows 10 and 11. It offers a range
+            of features, including debloating, privacy enhancement, performance
+            optimization, and streamlined app installation. <br />
+            <br />
+            Windows often collects extensive user data through telemetry,
+            including location, browsing history, and app usage, frequently
+            without clear consent, raising privacy concerns. WinScript empowers
+            you to take control by disabling telemetry and data collection from
+            both Windows and third-party apps, reducing tracking, and
+            restricting unnecessary app access. <br />
+            <br />
+            With WinScript, you can free up system resources by setting
+            unnecessary background services to manual, removing telemetry, and
+            more. The tool also integrates with Chocolatey, allowing you to
+            install all your favorite apps simultaneously in just one click.
+            <br />
+            <br />
+            Licensed under GPL-3.0, WinScript is completely free to use, fully
+            transparent, and welcomes contributions from the community. If you
+            want to contribute, please check out the contributing guide.
+          </p>
+        </div>
+      </article>
+    </main>
+		<Footer />
+	</body>
+</html>

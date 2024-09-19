@@ -1,0 +1,94 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import HeaderLink from '../components/HeaderLink.astro';
+import Footer from '../components/Footer.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+		<style is:global>
+			main {
+				padding-top: 3rem;
+			}
+			article {
+				padding-block: 0;
+			}
+			.title {
+				text-align: center;
+				line-height: 1;
+				font-size: 3rem;
+			}
+			.hero-image {
+				width: 100%;
+			}
+			.hero-image img {
+				display: block;
+				margin-block: 2rem;
+				width: 100%;
+				object-fit: cover;
+				border-radius: 12px;
+			}
+			.content {
+				width: 100%;
+				padding-bottom: 3rem;
+			}
+			.content :not(a, strong, em, del, span, input, code) + :not(a, strong, em, del, span, input, code) {
+				margin-top: 1rem;
+			}
+			.content img {
+				max-width: 100%;
+				object-fit: cover;
+			}
+			.content > ul {
+				padding-left: 1.5rem;
+			}
+			.content > ul > li {
+  				list-style: disc;
+			}
+			.content > ul > li > ul {
+  				list-style: disc;
+				margin-left: 1.5rem;
+				margin-block: 1rem;
+			}
+			h1 {
+				font-size: 2rem;
+			}
+			h2 {
+				font-size: 1.25rem;
+				color: var(--color-heading);
+				font-weight: 500;
+			}
+			pre.astro-code.github-dark {
+				background-color: var(--color-text) !important;
+				padding: 1rem;
+				border-radius: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<Header> 
+			<HeaderLink href="/" text="Home" />
+			<HeaderLink href="/blog/" text="Blog" />
+		</Header>
+		<main>
+			<article>
+				<h1 class="title">{title}</h1>
+				<div class="hero-image">
+					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				</div>
+				<div class="content">
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>

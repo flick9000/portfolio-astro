@@ -1,0 +1,144 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import HeaderLink from '../components/HeaderLink.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={"Francesco Gerardi"} description={"I'm Francesco Gerardi, Web Developer & Designer from Italy."} />
+	</head>
+	<body>
+		<Header> 
+			<HeaderLink href="/" text="Home" />
+			<HeaderLink href="/blog/" text="Blog" />
+		</Header>
+    <main>
+      <article>
+        <div class="even-columns" id="about">
+          <div style="border: none">
+            <h1>Typography</h1>
+          </div>
+          <p style="border: none">
+            This website uses the Inter font. You can find it in the
+            <a href="https://rsms.me/inter/inter.css">RSMS</a> repository.
+          </p>
+        </div>
+        <div class="even-columns" id="about">
+          <div>
+            <h1>Technologies</h1>
+          </div>
+          <p>
+            This website is built with only HTML, CSS and a bit of Javascript.
+            The websites are getting every day heavier and slower as new
+            frameworks come out and new technologies are used for simple things
+            that can be easily done in vanilla CSS and Javascript. I like
+            keeping things simple, fast and minimal.
+          </p>
+        </div>
+        <div class="even-columns" id="about">
+          <div>
+            <h1>License</h1>
+          </div>
+          <p>
+            This website is open-source and licensed under the GPL-3 License.
+          </p>
+        </div>
+        <div class="back">
+          <iconify-icon icon="gravity-ui:arrow-left"></iconify-icon>
+          <a href="/">Go Back</a>
+        </div>
+      </article>
+    </main>
+		<Footer />
+	</body>
+
+  <style>
+    	nav {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  height: 120px;
+	}
+
+	nav > h1 {
+	  font-size: 1.5rem;
+	  z-index: 1;
+	}
+
+	nav > ul {
+	  display: flex;
+	  gap: clamp(1.5rem, 3vw, 3rem);
+	  font-size: 1rem;
+	}
+
+	nav > iconify-icon {
+	  display: none;
+	  cursor: pointer;
+	  font-size: 1.5rem;
+	  z-index: 1;
+	}
+	@media (max-width: 600px) {
+	  nav > ul {
+	    display: none;
+	  }  
+	  nav > iconify-icon {
+	    display: block;
+	  }  
+	  .navbar.responsive {
+	    position: relative;
+	  }  
+	  .navbar.responsive > ul {
+	    position: fixed;
+	    display: flex;
+	    flex-direction: column;
+	    padding: 0 15%;
+	    font-size: 3rem;
+	    gap: 1rem;
+	    justify-content: center;
+	    background: var(--color-background-base);  
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    z-index: 0;
+	    left: 0;
+	  }
+	}
+    main {
+  min-height: calc(100vh - 120px);
+  padding-top: 3rem;
+}
+
+main > article {
+  padding-block: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.even-columns > * {
+  border-top: 1px solid var(--color-background-elevated);
+  padding-bottom: 1.5rem;
+}
+
+.even-columns > p {
+  text-wrap: balance;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  padding-block: 1.5rem;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.back > a {
+  text-decoration: none;
+}
+
+  </style>
+</html>

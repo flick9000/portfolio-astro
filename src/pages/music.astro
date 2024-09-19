@@ -1,0 +1,103 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import HeaderLink from '../components/HeaderLink.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={"SITE_TITLE"} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				padding-top: 6rem;
+			}
+			main > h1 {
+				font-size: 3rem;
+				text-align: center;
+			}
+			section {
+			}
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+			}
+			ul li a {
+				text-decoration: none;
+			}
+			ul li h4 {
+				font-weight: 500;
+				color: var(--color-heading);
+			}
+			ul li {
+				width: calc(50% - 1rem);
+			}
+			ul li:first-child {
+				width: 100%;
+				text-align: center;
+			}
+			ul li:first-child img {
+				width: 100%;
+				height: 500px;
+				object-fit: cover;
+			}
+			ul li:first-child .title {
+				font-size: 1.5rem;
+			}
+			ul li img {
+				object-fit: cover;
+				margin-bottom: 1rem;
+				border-radius: 0.75rem;
+			}
+			@media (max-width: 720px) {
+				ul {
+					gap: 1rem;
+				}
+				ul li {
+					width: 100%;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header> 
+			<HeaderLink href="/" text="Home" />
+			<HeaderLink href="/blog/" text="Blog" />
+		</Header>
+		<main>
+			<h1>Playlists</h1>
+			<section>
+				<ul>
+					<li>
+						<a target="_blank" href="https://open.spotify.com/playlist/4P9wMcQMvYKDEVzArf7DIJ?si=85de8fa3d21547c0">
+							<img width="720px" height="420px" src="/music/pinodaniele.jpg" alt="" />
+							<h4 class="title">Pino Daniele</h4>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://open.spotify.com/playlist/2RDvMzBEPEAUSLCDb7vbBE?si=330d9b45409d4f04">
+							<img width="720px" height="420px" src="/music/stevewonder.webp" alt="" />
+							<h4 class="title">Sigaro (Funk, R&B, Blues & Soul)</h4>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://open.spotify.com/playlist/39m5QM336yXdk281ecqNcf?si=5e50e48aa9c54ee3">
+							<img width="720px" height="420px" src="/music/hiphop.jpg" alt="" />
+							<h4 class="title">Italian Hip-Hop</h4>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

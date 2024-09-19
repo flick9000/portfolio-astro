@@ -64,6 +64,7 @@ h6 {
   font-size: 1rem;
   color: var(--color-subheading);
   font-weight: 400;
+  text-wrap: balance;
 }
 
 p {
@@ -117,7 +118,7 @@ main a {
 }
 
 main > article {
-  padding-block: 3rem;
+  padding-block: 1.5rem;
 }
 
 main > article > .even-columns > * {

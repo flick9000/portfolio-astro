@@ -2,7 +2,7 @@
 title: "Introducing WinScript"
 description: "Introducing open-source utility WinScript"
 pubDate: "Sep 18 2024"
-heroImage: "/winscript-landing.png"
+heroImage: "/winscript/winscript-landing.png"
 ---
 
 # What is WinScript?

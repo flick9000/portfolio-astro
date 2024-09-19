@@ -2,7 +2,7 @@
 title: "Automate Windows Setup"
 description: "Fully automate the Windows setup with an autoattend.xml file."
 pubDate: "Sept 18 2024"
-heroImage: "/autoattend.png"
+heroImage: "/autoattend/autoattend.png"
 ---
 
 # Table of Contents
@@ -40,7 +40,7 @@ Building an autoattend.xml is very simple. There are several autoattend.xml gene
 
 In this guide we will not go over the whole process, as it's very simple but only focus on the most important tweaks to do.
 
-<img src="/schneegans.png">
+</autoattend src="/autoattend/schneegans.png">
 
 ## Bypass Windows 11 TPM
 
@@ -61,7 +61,7 @@ To skip the internet requirement during installation and allow the creation of a
 
 This will add the proper flags to the autoattend.xml to block the requirement for a network connection during setup.
 
-<img src="/schneegans-setup.png">
+<img src="/autoattend/schneegans-setup.png">
 
 ## Create Account Without Password / PIN
 
@@ -74,7 +74,7 @@ To create a user account without requiring a password or PIN setup:
 If you only want a single account make sure to leave the User Account Fields blank. <br>
 This configures Windows to skip the requirement of setting a password or PIN during the setup process.
 
-<img src="/schneegans-accounts.png">
+<img src="/autoattend/schneegans-accounts.png">
 
 ## Windows Explorer Tweaks
 
@@ -89,7 +89,7 @@ Schneegans's generator allows you to customize Windows Explorer settings like sh
 
 These settings will be automatically included in the autoattend.xml to apply the tweaks during installation.
 
-<img src="/schneegans-explorer.png">
+<img src="/autoattend/schneegans-explorer.png">
 
 ## Windows System Tweaks
 
@@ -108,7 +108,7 @@ You can automate many system-level configurations via the generator, such as:
 
 Be careful about what you select, as disabling Windows Defender and UAC makes your system vulnerable to attacks.
 
-<img src="/schneegans-system.png">
+<img src="/autoattend/schneegans-system.png">
 
 ## Remove Bloatware
 
@@ -120,7 +120,7 @@ Here is the list of apps you can remove:
 
 All these removals will be handled automatically during the Windows setup, so you don't need to uninstall them manually after installation.
 
-<img src="/schneegans-debloat.png">
+<img src="/autoattend/schneegans-debloat.png">
 
 ## Run Custom Scripts
 
@@ -128,7 +128,7 @@ This is a powerful feature that enables further customization and automation bey
 
 I recommend using my open-source tool [WinScript](https://github.com/WinScript/WinScript) to create a custom Windows script, allowing you to disable completely telemetry, debloat further, apply performance tweaks and install all the apps you want in one click through the terminal.
 
-<img src="/winscript.png">
+<img src="/winscript/winscript.png">
 
 # My Preset
 

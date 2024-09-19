@@ -2,7 +2,7 @@
 title: "The Ultimate Windows Guide"
 description: "How to optimize Windows 10/11 for performance & privacy."
 pubDate: "Sept 17 2030"
-heroImage: "/windows.webp"
+heroImage: "/windows-guide/windows.webp"
 ---
 
 # Why this guide?
@@ -34,7 +34,7 @@ Updating your motherboard’s BIOS is an important step in optimizing your syste
 - Go to the Update BIOS / EZFlash / InstantFlash menu
 - Follow the instructions
 
-<img style="min-height: 200px" src="/biosupdate.jpg">
+<img style="min-height: 200px" src="/windows-guide/biosupdate.jpg">
 
 ## Enable XMP
 
@@ -48,7 +48,7 @@ XMP (Extreme Memory Profile) is a feature that allows you to automatically overc
 
 You can confirm that XMP is enabled by opening Task Manager > Performance > Memory and check if the RAM speed matches the XMP Profile.
 
-<img style="min-height: 200px" src="/biosxmp.png">
+<img style="min-height: 200px" src="/windows-guide/biosxmp.png">
 
 ## Enable Resizable Bar
 
@@ -61,14 +61,14 @@ Resizable BAR is an advanced PCIe technology that allows the CPU to access the e
 - Look for 'Resizable Bar' and/or 'Above 4G Decoding'
 - Enable them
 
-<img style="min-height: 200px" src="/resizablebar.png">
+<img style="min-height: 200px" src="/windows-guide/resizablebar.png">
 
 # Windows Setup
 
 Did you know that you can install Windows 11 without (almost) any bloatware just by changing a simple entry in the Windows setup?
 You just have to set as **Time & Currency format to "English (World)"** during the initial install. This will prevent Windows from installing default/suggested 3rd party apps.
 
-<img style="min-height: 200px" src="/windows-world.png">
+<img style="min-height: 200px" src="/windows-guide/windows-world.png">
 
 ## Activating Windows
 
@@ -83,7 +83,7 @@ To activate Windows (and Office) for free, **you can use 'Microsoft Activation S
 
 - Follow the instructions on the screen.
 
-<!-- <img style="min-height: 250px" src="/mas.png"> -->
+<!-- <img style="min-height: 250px" src="/windows-guide/mas.png"> -->
 
 ## Installing Drivers
 
@@ -111,7 +111,7 @@ The process is very straightforward. Just follow the instructions on the screen 
 
 The process is the same, follow the instructions on the screen and reboot afterwards.
 
-<img style="min-height: 200px" src="/nvcleanstall.jpg">
+<img style="min-height: 200px" src="/windows-guide/nvcleanstall.jpg">
 
 # Basic Windows Optimization
 
@@ -123,7 +123,7 @@ Now let's start with some basic, effective and most importantly safe optimizatio
 Windows Game Mode is a features that optimizes Windows's performance for gaming, by prioritizing CPU and GPU resources for the game, and prevents Windows Update from performing installations while you're playing.
 To enable Windows Game Mode, **go into Settings > Gaming > Game Mode, and turn it ON.**
 
-<img style="min-height: 200px" src="/gamemode.png">
+<img style="min-height: 200px" src="/windows-guide/gamemode.png">
 
 ## Uninstall Bloatware
 
@@ -134,7 +134,7 @@ Windows comes with a variety of pre-installed garbage that most users find unnec
 - Go to Installed Apps
 - Remove any app you don't need.
 
-<img style="min-height: 200px" src="/debloat.png">
+<img style="min-height: 200px" src="/windows-guide/debloat.png">
 
 ## Disable Startup Items
 
@@ -144,7 +144,7 @@ Startup programs can slow down your system's boot time and consume additional re
 - Go to Startup Apps
 - Disable programs that you don't need at the startup.
 
-<img style="min-height: 200px" src="/startup.png">
+<img style="min-height: 200px" src="/windows-guide/startup.png">
 
 ## High Performance Plan
 
@@ -155,7 +155,7 @@ Windows's default power plan is 'Balanced', **which is not optimal for gaming or
 - Select 'Power Options'
 - Enable High Performance
 
-<img style="min-height: 200px" src="/powerplan.png">
+<img style="min-height: 200px" src="/windows-guide/powerplan.png">
 
 ## Disable Data Collection
 
@@ -169,7 +169,7 @@ Here’s how to adjust these settings in Windows:
 - Do the same for 'Activity History'
 - Do the same for 'App Diagnostics'
 
-<img style="min-height: 200px" src="/datacollection.png">
+<img style="min-height: 200px" src="/windows-guide/datacollection.png">
 
 ## Disable Notifications
 
@@ -179,7 +179,7 @@ Here’s how to adjust these settings in Windows:
 - Go to System > Notifications
 - Turn them off
 
-<img style="min-height: 200px" src="/notifications.png">
+<img style="min-height: 200px" src="/windows-guide/notifications.png">
 
 ## Clean Temporary Files
 
@@ -193,7 +193,7 @@ Over time, your system accumulates temporary files from everyday tasks. **These 
 - Type 'temp' and delete all content inside
 - Type 'cleanmgr' and follow instructions
 
-<img style="min-height: 200px" src="/cleantemp.png">
+<img style="min-height: 200px" src="/windows-guide/cleantemp.png">
 
 # Advanced Windows Optimization
 
@@ -207,7 +207,7 @@ If you want instead customize your script, keep reading below.
 
 **The great thing is that you will not need to install any software on your computer as you will build your script online and then downloading the final .bat script.**
 
-<img style="min-height: 200px" src="/winscript.png">
+<img style="min-height: 200px" src="/winscript/winscript.png">
 
 # Debloat
 
@@ -222,7 +222,7 @@ Inside WinScript, **you can go in the 'Debloat' section**, and there you can fin
 - Remove Widgets
 - Remove Taskbar Widgets
 
-<img style="min-height: 200px" src="/winscript-debloat.png">
+<img style="min-height: 200px" src="/winscript/winscript-debloat.png">
 
 # Privacy
 
@@ -241,7 +241,7 @@ In the 'Privacy' section instead you can find scripts to **improve privacy by di
 - Opt out of Privacy Consent
 - Disable Activity Feed
 
-<img style="min-height: 200px" src="/winscript-privacy.png">
+<img style="min-height: 200px" src="/winscript/winscript-privacy.png">
 
 # Performance
 
@@ -255,7 +255,7 @@ In the 'Performance' section, you can find **scripts to enhance system speed and
 - Disable Hibernation (if you are on desktop, if you are on laptop keep it enabled)
 - Set Services to Manual (will free up system resources by keep services running only when they are needed)
 
-<img style="min-height: 200px" src="/winscript-performance.png">
+<img style="min-height: 200px" src="/winscript/winscript-performance.png">
 
 # Conclusion
 

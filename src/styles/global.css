@@ -10,15 +10,15 @@
   --color-text: #272727;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --color-background-base: #121212;
     --color-background-elevated: #272727;
-    --color-heading: #f5f5f5;
-    --color-subheading: #8f8f8f;
-    --color-text: #e8e8e8;
+    --color-heading: whitesmoke;
+    --color-subheading: silver;
+    --color-text: lightgray;
   }
-} */
+}
 
 @supports (font-variation-settings: normal) {
   :root {
@@ -54,6 +54,10 @@ h1 {
   color: var(--color-heading);
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+strong {
+  color: var(--color-heading);
 }
 
 h2,

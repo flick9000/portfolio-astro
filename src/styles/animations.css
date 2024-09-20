@@ -78,6 +78,6 @@ nav > ul li a:hover::after {
 
 .even-columns {
   animation: fade-in linear;
-  animation-timeline: scroll();
-  animation-range-end: 300px;
+  animation-timeline: view();
+  animation-range-end: 400px;
 }

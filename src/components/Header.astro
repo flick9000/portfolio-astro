@@ -11,11 +11,25 @@ navIcon?.addEventListener("click", () => {
 	const navbar = document.getElementById("navbar");
 	if (!navbar.classList.contains("responsive")) {
     navbar.classList.add("responsive");
-    document.body.style.overflow = "hidden"; // Or whatever fallback you need
+	document.body.setAttribute("data-lenis-prevent", "true");
+    document.body.style.overflowY = "hidden";
   } else {
     navbar.classList.remove("responsive");
+	document.body.removeAttribute("data-lenis-prevent");
     document.body.style.overflow = "visible";
   }
+})
+
+function hideNav() {
+	const navbar = document.getElementById("navbar");
+	navbar.classList.remove("responsive");
+	document.body.removeAttribute("data-lenis-prevent");
+	document.body.style.overflow = "visible";
+}
+
+const headerLink = document.querySelectorAll("nav ul li a");
+headerLink.forEach((link) => {
+  link.addEventListener("click", hideNav);
 })
 </script>
 

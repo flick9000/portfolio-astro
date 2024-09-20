@@ -26,6 +26,10 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 html.lenis,
 html.lenis body {
   height: auto;

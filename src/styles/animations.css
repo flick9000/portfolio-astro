@@ -76,8 +76,8 @@ nav > ul li a:hover::after {
   animation: fade-in 0.3s ease-out;
 }
 
-.even-columns {
+/* .even-columns {
   animation: fade-in linear;
   animation-timeline: scroll();
   animation-range-end: 300px;
-}
+} */
